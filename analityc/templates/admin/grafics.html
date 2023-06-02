@@ -1,0 +1,40 @@
+{% extends 'admin/change_list.html' %} {% load static %} {% block extrahead %}
+{{ block.super }}
+<link rel="stylesheet" href="{% static 'css/admin.css' %}" />
+
+<script src="{% static 'js/admin.js' %}"></script>
+
+
+{% endblock %} {% block content %}
+<div class="flex _flex-col" >
+
+    <button class="_btn" onclick="my_modal_1.showModal()">open modal</button>
+    <dialog id="my_modal_1" class="_modal">
+      <form method="_dialog" class="_modal-box">
+        <h3 class="_font-bold _text-lg">Hello!</h3>
+        <p class="_py-4">Press ESC key or click the button below to close</p>
+        <div class="_modal-action">
+          <!-- if there is a button in form, it will close the modal -->
+          <button class="_btn">Close</button>
+        </div>
+      </form>
+  </dialog>
+  
+  <div
+    class="_bg-gradient-to-r _from-red-400 _to-red-200 _text-white _rounded-md _pl-4 _pt-4 _pb-4 _w-64"
+  >
+    <p class="_text-xl">Total orders: {{ cl.result_list.count }}</p>
+
+    <p>Last 7 days</p>
+
+    USD$ {{ total|floatformat:2 }} {% for item in cl.result_list %}
+
+    <p>{{ item.name }}</p>
+
+    {% endfor %}
+    <hr class="_border-2 _p-2 _mt-4 _border-white _flex" />
+  </div>
+
+</div>
+{{ block.super }} {% endblock %}
+

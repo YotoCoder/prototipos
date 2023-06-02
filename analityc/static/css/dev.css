@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* .field-__str__ >a {
+  @apply !tw-text-red-500;
+} */
+
+.action-select, #action-toggle {
+    @apply _checkbox _checkbox-sm;
+}

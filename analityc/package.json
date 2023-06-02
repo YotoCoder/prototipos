@@ -1,0 +1,12 @@
+{
+  "name": "analityc",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "npx tailwindcss -i ./static/css/dev.css -o ./static/css/admin.css --watch"
+  },
+  "dependencies": {
+    "daisyui": "^3.0.1"
+  }
+}

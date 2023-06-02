@@ -1,0 +1,27 @@
+{% extends "admin/change_list.html" %}
+
+{% block extrahead %}
+    {{ block.super }}
+
+        <style>
+            .field-observaciones {
+                width: 100%;
+            }
+        </style>
+
+{% endblock %}
+
+{% block object-tools-items %}
+    {{ block.super }}
+    <h1>HOla</h1>
+{% endblock %}
+
+<!-- agregar script js -->
+{% block extrajs %}
+    {{ block.super }}
+    <script>
+        $(document).ready(function(){
+            alert('hola');
+        });
+    </script>
+{% endblock %}

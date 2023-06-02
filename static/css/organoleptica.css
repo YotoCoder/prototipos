@@ -1,0 +1,13 @@
+.edit:hover {
+    /** animacion al hacer hover que se haga mas grande **/
+    transform: scale(1.2);
+    transition: transform 0.5s;
+    cursor: pointer;
+}
+
+.delete:hover {
+    /** animacion al hacer hover que se haga mas grande **/
+    transform: scale(1.2);
+    transition: transform 0.5s;
+    cursor: pointer;
+}
